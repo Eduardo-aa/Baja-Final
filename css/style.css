@@ -122,12 +122,10 @@ header nav span a:hover::before {
 }
 .conteudo-text {
     text-align: justify;
-    width: 50%;
+    width: 100%;
 
 }
-.conteudo-img {
-    width: 50%;
-}
+
 header h1 {
     position: relative;
 }
