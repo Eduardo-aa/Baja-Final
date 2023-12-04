@@ -109,7 +109,7 @@ header nav span a:hover::before {
     font-family: 'Times New Roman', Times, serif;
     padding-top: 10px;
     display: flex;
- 
+    
   
 }
 #content {
@@ -127,6 +127,9 @@ header nav span a:hover::before {
 .conteudo-text {
     text-align: justify;
     width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+   
 
 }
 
@@ -156,6 +159,7 @@ header h1 {
 .result {
     width: 50%;
     text-align: justify;
+    margin-right: 15px;
 }
 .car-img {
     width: 50%;
