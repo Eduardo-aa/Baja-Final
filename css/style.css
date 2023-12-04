@@ -14,6 +14,7 @@
     align-items: center;
     background-position: center;
     overflow: hidden;
+    background-attachment: fixed;
 }
 #Home h1 {
     color: white;
