@@ -4,7 +4,7 @@
     overflow-x: hidden;
 }
 #Home {
-    background-image: url("FUNDO.jpeg");
+    background-image: url("fundo.jpeg");
     background-repeat: no-repeat;
     min-height: 100vh;
     background-size: cover;
