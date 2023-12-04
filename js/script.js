@@ -1,5 +1,5 @@
 window.addEventListener(("scroll"),()=>{
-    document.querySelector("#Home h1").style.marginTop = `${window.scrollY * 1}px`
+    document.querySelector("#").style.marginTop = `${window.scrollY * 1}px`
     document.querySelector("#carro-fundo").style.marginLeft = `${ window.scrollY * 2}px`
   
 })
