@@ -14,11 +14,11 @@ body {
   --color-neutral-30: #a8a29e;
   --color-neutral-40: #f5f5f5;
 }
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&display=swap");
 @font-face {
   font-family: "G";
   src: url(fonte/GearedSlab.ttf) format("truetype");
-  
+
   font-family: "F";
   src: url(fonte/francisco-bold.otf) format("opentype");
 
@@ -94,28 +94,25 @@ body {
   flex-wrap: wrap;
   align-items: center;
   z-index: 100;
-  
 }
 
-.logo{
+.logo {
   width: 50%;
 }
 
-.navbar{
+.navbar {
   width: 30%;
   text-align: end;
-  
 }
-.navbar a{
+.navbar a {
   font-size: 1.1rem;
   color: white;
   text-decoration: none;
   font-weight: 500;
   margin-right: 10px;
   position: relative;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-style: italic;
- 
 }
 .navbar a::after {
   content: " ";
@@ -126,21 +123,19 @@ body {
   bottom: 0;
   left: 0;
   transition: 0.5s ease-in-out;
-
 }
 .navbar .ativo::after {
   background-color: red;
 }
-.navbar a:hover::after{
+.navbar a:hover::after {
   width: 100%;
-  
 }
-.navbar .ativo, .navbar-1 .ativo {
+.navbar .ativo,
+.navbar-1 .ativo {
   color: red;
-
 }
 
-.navbar-1{
+.navbar-1 {
   margin: 0 10% 0 10%;
   display: flex;
   flex-direction: column;
@@ -150,15 +145,13 @@ body {
   display: none;
   background-color: rgba(26, 24, 24, 0.178);
   animation: loadAnimation 2s;
-  
 }
 .navbar-1 a {
   color: white;
   text-decoration: none;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-style: italic;
   font-size: 1.15rem;
- 
 }
 .icons {
   font-size: 2.8rem;
@@ -170,13 +163,10 @@ body {
   cursor: pointer;
   display: none;
   right: 5%;
-  
 }
-#check{
+#check {
   display: none;
 }
-
-
 
 #Home h1 {
   animation: loadAnimation 2s;
@@ -208,7 +198,9 @@ body {
 }
 .conteudo-text h1,
 .conteudo-text2 h1,
-#car h1, figcaption, .rodape h4 {
+#car h1,
+figcaption,
+.rodape h4 {
   color: red;
   font-family: "G";
   font-style: italic;
@@ -226,11 +218,9 @@ body {
 }
 
 .conteudo-text2 {
-  
   display: flex;
   flex-wrap: wrap;
   margin-top: 20px;
- 
 }
 .item {
   width: 45%;
@@ -244,7 +234,6 @@ body {
   justify-content: flex-end;
   align-items: center;
   text-align: center;
-
 }
 
 .item-1 img {
@@ -256,7 +245,6 @@ body {
   -moz-box-shadow: 7px 2px 6px 0px rgba(220, 15, 15, 0.75);
   border: 1px solid rgba(255, 255, 255, 0.5);
 }
-
 
 header h1 {
   position: relative;
@@ -289,7 +277,6 @@ header h1 {
   background-color: rgb(2, 2, 2);
   color: red;
   transition: 0.8s;
-  
 }
 .car-img {
   width: 50%;
@@ -307,13 +294,13 @@ header h1 {
 }
 /*rodape*/
 footer {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   letter-spacing: 1px;
   width: 100%;
-  color: var( --color-neutral-40);
+  color: var(--color-neutral-40);
   animation: LoadAnimation 2s;
 }
 footer h3 {
@@ -328,10 +315,7 @@ footer h3 {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   padding: 3rem 3.5rem;
-  
-
 }
-
 
 #footer_social_media {
   display: flex;
@@ -351,19 +335,19 @@ footer h3 {
 #footer_social_media .footer-link i {
   font-size: 1.25rem;
 }
-#footer_social_media .footer-link:hover{
+#footer_social_media .footer-link:hover {
   opacity: 0.8;
 }
 #instagram {
   background: linear-gradient(#7f37c9, #ff2992, #ff9807);
 }
-#facebook{
+#facebook {
   background-color: #4267b3;
 }
 #whatsapp {
   background-color: #25d366;
 }
-#youtube{
+#youtube {
   background-color: red;
 }
 .footer-list {
@@ -371,14 +355,13 @@ footer h3 {
   flex-direction: column;
   gap: 0.75rem;
   list-style: none;
-  
 }
-.footer-list .footer-link{
+.footer-list .footer-link {
   color: var(--color-neutral-30);
   transition: all 0.4s;
 }
-.footer-list .footer-link:hover{
-  color:red;
+.footer-list .footer-link:hover {
+  color: red;
 }
 
 /*Responsividade*/
@@ -387,14 +370,12 @@ footer h3 {
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
   }
-  
 }
 @media screen and (max-width: 700px) {
   #footer_content {
     grid-template-columns: repeat(1, 1fr);
-   oadding: 3rem 2rem;
+    oadding: 3rem 2rem;
   }
-  
 }
 @media (max-width: 1000px) {
   .header {
@@ -406,36 +387,32 @@ footer h3 {
   .icons {
     display: block;
     font-size: 2.8rem;
-    
   }
-  #check:checked~.icons #menu-icon {
+  #check:checked ~ .icons #menu-icon {
     display: none;
   }
   .icons #close-icon {
     display: none;
   }
-  #check:checked~.icons #close-icon {
+  #check:checked ~ .icons #close-icon {
     display: block;
   }
-  .navbar{
+  .navbar {
     display: none;
   }
-  .navbar-1{
-    
+  .navbar-1 {
     border: 2px solid red;
   }
   .navbar-1 a {
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.15rem ;
+    font-family: "Poppins", sans-serif;
+    font-size: 1.15rem;
   }
-
-
 }
 @media (max-width: 1050px) {
-  .conteudo-text2{
+  .conteudo-text2 {
     margin-top: 20px;
   }
-  .item{
+  .item {
     width: 40%;
   }
   .item-1 {
@@ -452,7 +429,6 @@ footer h3 {
     -moz-box-shadow: 7px 2px 6px 0px rgba(220, 15, 15, 0.75);
     border: 1px solid rgba(255, 255, 255, 0.5);
   }
-
 }
 @media (max-width: 800px) {
   .item-1 img {
@@ -464,23 +440,22 @@ footer h3 {
     -moz-box-shadow: 7px 2px 6px 0px rgba(220, 15, 15, 0.75);
     border: 1px solid rgba(255, 255, 255, 0.5);
   }
-  .car-img  {
+  .car-img {
     width: 60%;
   }
   .car-img img {
-  width: 250px;
-  height: 250px;
+    width: 250px;
+    height: 250px;
   }
-  .result{
+  .result {
     width: 40%;
-   
   }
 }
-@media (max-width: 710px){
-  .car-img  {
+@media (max-width: 710px) {
+  .car-img {
     width: 100%;
   }
-  .result{
+  .result {
     width: 100%;
   }
 }
@@ -494,7 +469,6 @@ footer h3 {
     -moz-box-shadow: 7px 2px 6px 0px rgba(220, 15, 15, 0.75);
     border: 1px solid rgba(255, 255, 255, 0.5);
   }
-
 }
 @media (max-width: 460px) {
   .conteudo-text2 {
@@ -509,7 +483,7 @@ footer h3 {
   .carros {
     flex-direction: column;
   }
-  .result{
+  .result {
     width: 100%;
   }
   .car-img {
@@ -517,7 +491,6 @@ footer h3 {
     width: 100%;
     align-items: center;
     text-align: center;
-    
   }
   .car-img img {
     width: 250px;
