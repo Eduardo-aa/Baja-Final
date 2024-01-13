@@ -117,6 +117,7 @@ body {
   position: relative;
   font-family: "Inter", sans-serif;
   font-style: italic;
+  
 }
 .navbar a::after {
   content: " ";
@@ -366,6 +367,14 @@ footer h3 {
 }
 .footer-list .footer-link:hover {
   color: red;
+}
+.copy {
+  text-align: center;
+}
+.copy h3 {
+  color: red;
+  text-shadow: 3px 2px 5px rgba(220, 15, 15, 0.4);
+
 }
 /* Extras */
 ::-webkit-scrollbar{
