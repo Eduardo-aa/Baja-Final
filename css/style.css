@@ -1,23 +1,30 @@
-*,
-body {
-  padding: 0;
-  margin: 0;
-  overflow-x: hidden;
-  
+/* Define as propriedades iniciais para o elemento "*", body */
+*, body {
+  padding: 0; /* Define padding como 0 */
+  margin: 0; /* Define margem como 0 */
+  overflow-x: hidden; /* Esconde a barra de rolagem horizontal se houver overflow */
 }
-html{
+
+/* Define o comportamento de rolagem suave para o elemento HTML */
+html {
   scroll-behavior: smooth;
 }
+
+/* Define o estilo geral do corpo do documento */
 body {
-  background-color: black;
-  color: white;
+  background-color: black; /* Define o fundo como preto */
+  color: white; /* Define a cor do texto como branco */
 }
+
+/* Define variáveis de cor no root para reutilização */
 :root {
   --color-neutral-0: #0e0c0c;
   --color-neutral-10: #171717;
   --color-neutral-30: #a8a29e;
   --color-neutral-40: #f5f5f5;
 }
+
+/* Importa a fonte "Inter" do Google Fonts e declara algumas fontes locais */
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&display=swap");
 @font-face {
   font-family: "G";
@@ -30,9 +37,9 @@ body {
   src: url(fonte/Poppins-BlackItalic.ttf);
 }
 
+/* Estilo específico para a seção com id "Home" */
 #Home {
   background-color: rgb(0, 0, 0);
-
   background-repeat: no-repeat;
   min-height: 80vh;
   background-size: cover;
@@ -44,15 +51,16 @@ body {
   overflow: hidden;
   background-attachment: fixed;
 }
+
+/* Estilos para os títulos dentro da seção #Home */
 #Home h1 {
   color: white;
-
   font-size: 2.5rem;
   z-index: 2;
   margin-top: 10px;
-
   font-style: italic;
 }
+
 #Home h2 {
   font-size: 2.5rem;
   font-family: "G";
@@ -61,12 +69,15 @@ body {
   color: red;
 }
 
+/* Estilo específico para um elemento com id "carro-fundo" dentro de #Home */
 #Home #carro-fundo {
   position: absolute;
   margin-bottom: 0px;
   margin-left: 60px;
   pointer-events: none;
 }
+
+/* Animação de carregamento para a classe .header */
 @keyframes loadAnimation {
   0% {
     opacity: 0;
@@ -77,6 +88,8 @@ body {
     transform: translateY(0%);
   }
 }
+
+/* Outra animação de carregamento para .header (com letra maiúscula) */
 @keyframes LoadAnimation {
   0% {
     opacity: 0;
@@ -88,8 +101,9 @@ body {
   }
 }
 
+/* Estilo para a classe .header */
 .header {
-  animation: loadAnimation 2s;
+  animation: loadAnimation 2s; /* Aplica a animação de carregamento em 2 segundos */
   top: 0;
   left: 0;
   width: 100%;
@@ -100,14 +114,18 @@ body {
   z-index: 100;
 }
 
+/* Define o estilo para a classe "logo" */
 .logo {
   width: 50%;
 }
 
+/* Define o estilo para a classe "navbar" */
 .navbar {
   width: 30%;
-  text-align: end;
+  text-align: end; /* Alinha o texto à direita */
 }
+
+/* Define o estilo para links dentro da classe "navbar" */
 .navbar a {
   font-size: 1.1rem;
   color: white;
@@ -117,8 +135,9 @@ body {
   position: relative;
   font-family: "Inter", sans-serif;
   font-style: italic;
-  
 }
+
+/* Adiciona um efeito visual a links dentro da classe "navbar" quando hover */
 .navbar a::after {
   content: " ";
   width: 0%;
@@ -129,17 +148,24 @@ body {
   left: 0;
   transition: 0.5s ease-in-out;
 }
+
+/* Define a cor do efeito visual para links ativos na classe "navbar" */
 .navbar .ativo::after {
   background-color: red;
 }
+
+/* Define a expansão do efeito visual para links quando hover */
 .navbar a:hover::after {
   width: 100%;
 }
+
+/* Define a cor do texto para links ativos na classe "navbar" e "navbar-1" */
 .navbar .ativo,
 .navbar-1 .ativo {
   color: red;
 }
 
+/* Define o estilo para a classe "navbar-1" */
 .navbar-1 {
   margin: 0 10% 0 10%;
   display: flex;
@@ -147,10 +173,12 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  display: none;
+  display: none; /* Inicialmente oculta a classe "navbar-1" */
   background-color: rgba(26, 24, 24, 0.178);
-  animation: loadAnimation 2s;
+  animation: loadAnimation 2s; /* Adiciona uma animação de carregamento */
 }
+
+/* Define o estilo para links dentro da classe "navbar-1" */
 .navbar-1 a {
   color: white;
   text-decoration: none;
@@ -158,6 +186,8 @@ body {
   font-style: italic;
   font-size: 1.15rem;
 }
+
+/* Define o estilo para a classe "icons" */
 .icons {
   font-size: 2.8rem;
   position: absolute;
@@ -166,279 +196,377 @@ body {
   align-items: flex-end;
   text-align: end;
   cursor: pointer;
-  display: none;
+  display: none; /* Inicialmente oculta a classe "icons" */
   right: 5%;
 }
+
+/* Define o estilo para o elemento com id "check" */
 #check {
-  display: none;
+  display: none; /* Inicialmente oculta o elemento com id "check" */
 }
 
+/* Define a animação de carregamento para elementos dentro da classe "Home" */
 #Home h1 {
   animation: loadAnimation 2s;
 }
 #Home h2 {
   animation: loadAnimation 2s;
 }
+
+/* Define o estilo para a classe "content" */
 .content {
   margin: 20px 10% 0 10%;
-
   padding-top: 10px;
   display: flex;
   flex-wrap: wrap;
   border-top: 2px solid white;
 }
 
+/* Define uma animação chamada LoadAnimation com duração de 3 segundos para elementos com a classe 'content' */
 .content {
   animation: LoadAnimation 3s;
 }
+
+/* Define a mesma animação LoadAnimation com duração de 3 segundos para elementos com a id 'car' */
 #car {
   animation: LoadAnimation 3s;
 }
 
+/* Estiliza elementos com a classe 'conteudo-text' */
 .conteudo-text {
-  text-align: justify;
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
+  text-align: justify; /* Alinha o texto justificado */
+  width: 100%; /* Largura de 100% */
+  display: flex; /* Usa o modelo de layout flexível */
+  flex-wrap: wrap; /* Permite que os itens se ajustem em várias linhas */
 }
+
+/* Estiliza vários elementos específicos com cores, fontes e sombras de texto */
 .conteudo-text h1,
 .conteudo-text2 h1,
 #car h1,
 figcaption,
 .rodape h4 {
-  color: red;
-  font-family: "G";
-  font-style: italic;
-  text-shadow: 3px 2px 5px rgba(220, 15, 15, 0.6);
+  color: red; /* Cor do texto vermelha */
+  font-family: "G"; /* Fonte 'G' */
+  font-style: italic; /* Estilo de fonte itálico */
+  text-shadow: 3px 2px 5px rgba(220, 15, 15, 0.6); /* Sombra de texto com deslocamento e cor específicos */
 }
+
+/* Mais estilos para elementos com as classes 'conteudo-text', 'conteudo-text2' e a id 'car' */
 .conteudo-text,
 .conteudo-text2,
 #car {
-  font-family: "G";
-  font-style: italic;
-  text-align: justify;
+  font-family: "G"; /* Fonte 'G' */
+  font-style: italic; /* Estilo de fonte itálico */
+  text-align: justify; /* Alinha o texto justificado */
 }
+
+/* Define largura para elementos com a classe 'item-1' */
 .item-1 {
   width: 50%;
 }
 
+/* Estiliza elementos com a classe 'conteudo-text2' */
 .conteudo-text2 {
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: 20px;
-}
-.item {
-  width: 45%;
-  justify-content: start;
-  align-items: start;
-  text-align: start;
-}
-.item-1 {
-  width: 55%;
-  height: auto;
-  justify-content: flex-end;
-  align-items: center;
-  text-align: center;
+  display: flex; /* Usa o modelo de layout flexível */
+  flex-wrap: wrap; /* Permite que os itens se ajustem em várias linhas */
+  margin-top: 20px; /* Margem superior de 20 pixels */
 }
 
+/* Estiliza elementos com a classe 'item' */
+.item {
+  width: 45%; /* Largura de 45% */
+  justify-content: start; /* Alinha o conteúdo no início do eixo principal */
+  align-items: start; /* Alinha os itens no início do eixo transversal */
+  text-align: start; /* Alinha o texto no início do bloco */
+}
+
+/* Mais estilos para elementos com a classe 'item-1' */
+.item-1 {
+  width: 55%; /* Largura de 55% */
+  height: auto; /* Altura automática */
+  justify-content: flex-end; /* Alinha o conteúdo no final do eixo principal */
+  align-items: center; /* Alinha os itens no centro do eixo transversal */
+  text-align: center; /* Alinha o texto no centro do bloco */
+}
+
+/* Estiliza a imagem dentro de elementos com a classe 'item-1' */
 .item-1 img {
-  border-radius: 50%;
-  height: 400px;
-  width: 400px;
-  box-shadow: 7px 2px 2px 0px rgba(220, 15, 15, 0.75);
+  border-radius: 50%; /* Borda com raio de 50% para criar um efeito de borda arredondada */
+  height: 400px; /* Altura fixa da imagem */
+  width: 400px; /* Largura fixa da imagem */
+  box-shadow: 7px 2px 2px 0px rgba(220, 15, 15, 0.75); /* Sombra da caixa com deslocamento e cor específicos */
   -webkit-box-shadow: 7px 2px 6px 0px rgba(220, 15, 15, 0.75);
   -moz-box-shadow: 7px 2px 6px 0px rgba(220, 15, 15, 0.75);
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.5); /* Borda fina com cor específica */
 }
 
+/* Estiliza o elemento h1 dentro do cabeçalho */
 header h1 {
-  position: relative;
+  position: relative; /* Define a posição relativa do elemento */
 }
+
+/* Estiliza elementos com a classe 'carros' */
 .carros {
-  margin: 20px 10% 0 10%;
-  font-size: 1rem;
-  font-family: "Times New Roman", Times, serif;
-  padding-top: 10px;
-  display: flex;
-  border-top: 2px solid white;
+  margin: 20px 10% 0 10%; /* Margens superior, direita, inferior e esquerda com valores específicos */
+  font-size: 1rem; /* Tamanho da fonte de 1 rem */
+  font-family: "Times New Roman", Times, serif; /* Fontes específicas */
+  padding-top: 10px; /* Preenchimento superior de 10 pixels */
+  display: flex; /* Usa o modelo de layout flexível */
+  border-top: 2px solid white; /* Borda superior sólida com cor branca */
 }
+
+/* Estilo para botões na seção de carros */
 .carros button {
-  margin-top: 10px;
-  width: 70px;
-  height: 50px;
-  background: red;
-  color: white;
-  border: 2px solid red;
-  border-radius: 10px;
-  font-size: 1rem;
-  font-family: "Times New Roman", Times, serif;
+  margin-top: 10px; /* Margem superior de 10 pixels */
+  width: 70px; /* Largura do botão de 70 pixels */
+  height: 50px; /* Altura do botão de 50 pixels */
+  background: red; /* Cor de fundo vermelha */
+  color: white; /* Cor do texto branca */
+  border: 2px solid red; /* Borda sólida vermelha com 2 pixels de largura */
+  border-radius: 10px; /* Borda arredondada com raio de 10 pixels */
+  font-size: 1rem; /* Tamanho da fonte 1rem */
+  font-family: "Times New Roman", Times, serif; /* Fonte Times New Roman ou Times ou genérica serif */
 }
+
+/* Estilo para a classe 'result' */
 .result {
-  width: 50%;
-  text-align: justify;
-  margin-right: 15px;
+  width: 50%; /* Largura de 50% em relação ao contêiner pai */
+  text-align: justify; /* Alinhamento do texto justificado */
+  margin-right: 15px; /* Margem direita de 15 pixels */
 }
+
+/* Efeito de hover para botões dentro da classe 'result' */
 .result button:hover {
-  background-color: rgb(2, 2, 2);
-  color: red;
-  transition: 0.8s;
+  background-color: rgb(2, 2, 2); /* Cor de fundo escura ao passar o mouse */
+  color: red; /* Cor do texto vermelha ao passar o mouse */
+  transition: 0.8s; /* Transição suave de 0.8 segundos */
 }
+
+/* Estilo para a classe 'car-img' */
 .car-img {
-  width: 50%;
-  height: 400px;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  width: 50%; /* Largura de 50% em relação ao contêiner pai */
+  height: 400px; /* Altura de 400 pixels */
+  justify-content: center; /* Alinhamento centralizado no eixo horizontal */
+  align-items: center; /* Alinhamento centralizado no eixo vertical */
+  text-align: center; /* Alinhamento centralizado do texto */
 }
 
+/* Estilo para imagens dentro da classe 'car-img' */
 .car-img img {
-  width: 300px;
-  height: 300px;
-  border-radius: 10px;
-  margin-top: 15px;
-}
-/*rodape*/
-footer {
-  font-family: "Inter", sans-serif;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  letter-spacing: 1px;
-  width: 100%;
-  color: var(--color-neutral-40);
-  animation: LoadAnimation 2s;
-}
-footer h3 {
-  color: red;
-  text-shadow: 3px 2px 5px rgba(220, 15, 15, 0.6);
-}
-.footer-link {
-  text-decoration: none;
-}
-#footer_content {
-  background-color: rgba(15, 15, 15, 0.3);
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  padding: 3rem 3.5rem;
+  width: 300px; /* Largura da imagem de 300 pixels */
+  height: 300px; /* Altura da imagem de 300 pixels */
+  border-radius: 10px; /* Borda arredondada com raio de 10 pixels */
+  margin-top: 15px; /* Margem superior de 15 pixels */
 }
 
+/* Estilo para o rodapé */
+footer {
+  font-family: "Inter", sans-serif; /* Fonte Inter ou genérica sans-serif */
+  margin: 0; /* Margem zero */
+  padding: 0; /* Preenchimento zero */
+  box-sizing: border-box; /* Modelo de caixa que inclui bordas e preenchimento no cálculo total da largura e altura */
+  letter-spacing: 1px; /* Espaçamento entre caracteres de 1 pixel */
+  width: 100%; /* Largura de 100% em relação ao contêiner pai */
+  color: var(--color-neutral-40); /* Cor do texto a partir de uma variável ou valor definido */
+  animation: LoadAnimation 2s; /* Animação chamada 'LoadAnimation' com duração de 2 segundos */
+}
+
+/* Estilo para títulos dentro do rodapé */
+footer h3 {
+  color: red; /* Cor do texto vermelha */
+  text-shadow: 3px 2px 5px rgba(220, 15, 15, 0.6); /* Sombra do texto com deslocamento e cor específica */
+}
+
+/* Estilo para links no rodapé */
+.footer-link {
+  text-decoration: none; /* Remover sublinhado dos links */
+}
+
+/* Estilo para o conteúdo dentro do rodapé */
+#footer_content {
+  background-color: rgba(15, 15, 15, 0.3); /* Cor de fundo com transparência */
+  display: grid; /* Layout de grid */
+  grid-template-columns: repeat(4, 1fr); /* 4 colunas de largura igual no grid */
+  padding: 3rem 3.5rem; /* Preenchimento superior e inferior de 3rem e laterais de 3.5rem */
+}
+
+/* Estilo para ícones de redes sociais no rodapé */
 #footer_social_media {
-  display: flex;
-  gap: 2rem;
-  margin-top: 1.5rem;
+  display: flex; /* Layout flexível */
+  gap: 2rem; /* Espaçamento entre os elementos de 2rem */
+  margin-top: 1.5rem; /* Margem superior de 1.5rem */
 }
+
+/* Estilo para links de redes sociais no rodapé */
 #footer_social_media .footer-link {
-  height: 2.5rem;
-  width: 2.5rem;
-  color: var(--color-neutral-40);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.4s;
+  height: 2.5rem; /* Altura dos links de redes sociais de 2.5rem */
+  width: 2.5rem; /* Largura dos links de redes sociais de 2.5rem */
+  color: var(--color-neutral-40); /* Cor do texto a partir de uma variável ou valor definido */
+  border-radius: 50%; /* Borda arredondada com raio de 50% */
+  display: flex; /* Layout flexível */
+  align-items: center; /* Alinhamento centralizado no eixo vertical */
+  justify-content: center; /* Alinhamento centralizado no eixo horizontal */
+  transition: all 0.4s; /* Transição suave de 0.4 segundos para todas as propriedades */
 }
+
+/* Estilo para ícones dentro dos links de redes sociais no rodapé */
 #footer_social_media .footer-link i {
-  font-size: 1.25rem;
+  font-size: 1.25rem; /* Tamanho da fonte dos ícones de 1.25rem */
 }
+
+/* Efeito de hover para links de redes sociais no rodapé */
 #footer_social_media .footer-link:hover {
-  opacity: 0.8;
+  opacity: 0.8; /* Opacidade de 0.8 ao passar o mouse */
 }
+
+/* Estilo para a seção Instagram com um gradiente linear de três cores */
 #instagram {
   background: linear-gradient(#7f37c9, #ff2992, #ff9807);
 }
+
+/* Estilo para a seção Facebook com fundo cinza */
 #facebook {
   background-color: grey;
 }
+
+/* Estilo para a seção WhatsApp com fundo cinza */
 #whatsapp {
   background-color: grey;
 }
+
+/* Estilo para a seção YouTube com fundo vermelho */
 #youtube {
   background-color: red;
 }
+
+/* Estilo para a lista no rodapé, organizando os itens em coluna e definindo espaçamento entre eles */
 .footer-list {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
   list-style: none;
 }
+
+/* Estilo para os links na lista do rodapé, definindo cor e adicionando transição ao passar o mouse */
 .footer-list .footer-link {
   color: var(--color-neutral-30);
   transition: all 0.4s;
 }
+
+/* Mudança de cor ao passar o mouse nos links do rodapé */
 .footer-list .footer-link:hover {
   color: red;
 }
+
+/* Estilo para o texto centralizado na seção de cópia, com título em vermelho e sombra no texto */
 .copy {
   text-align: center;
 }
+
+/* Estilo para o título h3 na seção de cópia, com cor vermelha e sombra no texto */
 .copy h3 {
   color: red;
   text-shadow: 3px 2px 5px rgba(220, 15, 15, 0.4);
-
 }
+
+/* Estilos extras para a barra de rolagem e seu polegar no navegador webkit */
 /* Extras */
-::-webkit-scrollbar{
+::-webkit-scrollbar {
   width: 10px;
 }
-::-webkit-scrollbar-thumb{
+
+::-webkit-scrollbar-thumb {
   background-color: rgba(220, 15, 15, 0.8);
 }
-/*Responsividade*/
+
+/* Estilos de responsividade para diferentes larguras de tela */
+/* Responsividade para telas com largura máxima de 1100px */
 @media screen and (max-width: 1100px) {
   #footer_content {
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
   }
 }
+
+/* Responsividade para telas com largura máxima de 700px */
 @media screen and (max-width: 700px) {
   #footer_content {
     grid-template-columns: repeat(1, 1fr);
-    oadding: 3rem 2rem;
+    padding: 3rem 2rem;
   }
 }
+
+/* Responsividade para telas com largura máxima de 1000px */
 @media (max-width: 1000px) {
+  /* Animação para o elemento com a classe .header e seus descendentes */
   .header {
     animation: LoadAnimation 2s;
   }
+
+  /* Animação para o input dentro do elemento com a classe .header */
   .header input {
     animation: loadAnimation 2s;
   }
+
+  /* Exibição de blocos de ícones e ajuste do tamanho da fonte */
   .icons {
     display: block;
     font-size: 2.8rem;
   }
+
+  /* Esconder o ícone de menu quando a caixa de seleção estiver marcada */
   #check:checked ~ .icons #menu-icon {
     display: none;
   }
+
+  /* Esconder o ícone de fechar quando a caixa de seleção estiver desmarcada */
   .icons #close-icon {
     display: none;
   }
+
+  /* Exibir o ícone de fechar quando a caixa de seleção estiver marcada */
   #check:checked ~ .icons #close-icon {
     display: block;
   }
+
+  /* Esconder a barra de navegação */
   .navbar {
     display: none;
   }
+
+  /* Estilo para a barra de navegação com borda vermelha */
   .navbar-1 {
     border: 2px solid red;
   }
+
+  /* Estilo para links dentro da barra de navegação */
   .navbar-1 a {
     font-family: "Poppins", sans-serif;
     font-size: 1.15rem;
   }
 }
+
+/* Responsividade para telas com largura máxima de 1050px */
 @media (max-width: 1050px) {
+  /* Ajuste de margem para o elemento com a classe .conteudo-text2 */
   .conteudo-text2 {
     margin-top: 20px;
   }
+
+  /* Ajuste de largura para o elemento com a classe .item */
   .item {
     width: 40%;
   }
+
+  /* Ajuste de largura, alinhamento e estilos para o elemento com a classe .item-1 */
   .item-1 {
     width: 60%;
     justify-content: center;
     align-items: center;
   }
+
+  /* Estilo para a imagem dentro do elemento com a classe .item-1 */
   .item-1 img {
     border-radius: 50%;
     height: 350px;
@@ -448,73 +576,96 @@ footer h3 {
     -moz-box-shadow: 7px 2px 6px 0px rgba(220, 15, 15, 0.75);
     border: 1px solid rgba(255, 255, 255, 0.5);
   }
+  
 }
+/* Define estilos específicos para telas com largura máxima de 800 pixels */
 @media (max-width: 800px) {
+  
+  /* Estiliza as imagens dentro do elemento com classe "item-1" */
   .item-1 img {
-    border-radius: 50%;
-    height: 250px;
-    width: 250px;
-    box-shadow: 7px 2px 2px 0px rgba(220, 15, 15, 0.75);
+    border-radius: 50%; /* Adiciona borda circular */
+    height: 250px; /* Define altura da imagem */
+    width: 250px; /* Define largura da imagem */
+    box-shadow: 7px 2px 2px 0px rgba(220, 15, 15, 0.75); /* Adiciona sombra à imagem */
     -webkit-box-shadow: 7px 2px 6px 0px rgba(220, 15, 15, 0.75);
     -moz-box-shadow: 7px 2px 6px 0px rgba(220, 15, 15, 0.75);
-    border: 1px solid rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.5); /* Adiciona borda à imagem */
   }
+  
+  /* Estiliza elementos com classe "car-img" */
   .car-img {
-    width: 60%;
+    width: 60%; /* Define largura do elemento */
   }
+  
+  /* Estiliza imagens dentro de elementos com classe "car-img" */
   .car-img img {
-    width: 250px;
-    height: 250px;
+    width: 250px; /* Define largura da imagem */
+    height: 250px; /* Define altura da imagem */
   }
+  
+  /* Estiliza elementos com classe "result" */
   .result {
-    width: 40%;
+    width: 40%; /* Define largura do elemento */
   }
 }
+
+/* Define estilos específicos para telas com largura máxima de 710 pixels */
 @media (max-width: 710px) {
-  .car-img {
-    width: 100%;
-  }
+  /* Ajusta a largura dos elementos com classe "car-img" e "result" para 100% */
+  .car-img,
   .result {
     width: 100%;
   }
 }
+
+/* Define estilos específicos para telas com largura máxima de 600 pixels */
 @media (max-width: 600px) {
+  
+  /* Estiliza as imagens dentro do elemento com classe "item-1" */
   .item-1 img {
-    border-radius: 50%;
-    height: 150px;
-    width: 150px;
-    box-shadow: 7px 2px 2px 0px rgba(220, 15, 15, 0.75);
+    border-radius: 50%; /* Adiciona borda circular */
+    height: 150px; /* Define altura da imagem */
+    width: 150px; /* Define largura da imagem */
+    box-shadow: 7px 2px 2px 0px rgba(220, 15, 15, 0.75); /* Adiciona sombra à imagem */
     -webkit-box-shadow: 7px 2px 6px 0px rgba(220, 15, 15, 0.75);
     -moz-box-shadow: 7px 2px 6px 0px rgba(220, 15, 15, 0.75);
-    border: 1px solid rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.5); /* Adiciona borda à imagem */
   }
 
 }
+
+/* Define estilos adicionais para telas com largura máxima de 600 pixels */
 @media (max-width: 600px) {
+  
+  /* Ajusta a direção do layout para coluna para elementos com classe "conteudo-text2" */
   .conteudo-text2 {
     flex-direction: column;
   }
-  .item {
-    width: 100%;
-  }
-  .item-1 {
-    width: 100%;
-  }
-  .carros {
-    flex-direction: column;
-  }
+  
+  /* Ajusta a largura dos elementos "item", "item-1", e "result" para 100% */
+  .item,
+  .item-1,
   .result {
     width: 100%;
   }
+  
+  /* Ajusta a direção do layout para coluna para elementos com classe "carros" */
+  .carros {
+    flex-direction: column;
+  }
+  
+  /* Ajusta a largura do elemento com classe "car-img" para 100% e centraliza o conteúdo */
   .car-img {
     justify-content: center;
     width: 100%;
     align-items: center;
     text-align: center;
   }
+  
+  /* Ajusta a largura e altura das imagens dentro de elementos com classe "car-img" */
   .car-img img {
-    width: 250px;
-    height: 250px;
+    width: 250px; /* Define largura da imagem */
+    height: 250px; /* Define altura da imagem */
   }
 
 }

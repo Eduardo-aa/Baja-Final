@@ -1,96 +1,115 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Corsários Baja</title>
-        <link rel="stylesheet" href="css/style.css">
-        <script src="js/script.js"></script>
-        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'
-            rel='stylesheet'>
-        <link rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-            integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-            crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    </head>
-    <body>
+<head>
+    <!-- Definindo o conjunto de caracteres da página -->
+    <meta charset="UTF-8">
+    
+    <!-- Configurando a visualização em dispositivos móveis -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <header class="header">
+    <!-- Título da página -->
+    <title>Corsários Baja</title>
 
-            <span class="logo">
-                <img
-                    src="imagem/WhatsApp_Image_2023-09-03_at_17.22.56__1_-removebg-preview.png"
-                    alt="Logo Baja" width="100px" height="80px"></img>
+    <!-- Link para o arquivo de estilo CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Inclusão de script JavaScript -->
+    <script src="js/script.js"></script>
+
+    <!-- Links para bibliotecas externas de ícones -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <!-- Cabeçalho da página -->
+    <header class="header">
+        <!-- Logo da equipe -->
+        <span class="logo">
+            <img src="imagem/WhatsApp_Image_2023-09-03_at_17.22.56__1_-removebg-preview.png"
+                alt="Logo Baja" width="100px" height="80px">
         </span>
 
+        <!-- Ícone de menu para dispositivos móveis -->
         <input type="checkbox" name="check" id="check">
         <label for="check" class="icons">
+            <!-- Ícone do menu -->
             <i class='bx bx-menu' id="menu-icon" onclick="Click()"></i>
+            
+            <!-- Ícone de fechar menu -->
             <i class='bx bx-x' id="close-icon" onclick="Click1()"></i>
         </label>
+
+        <!-- Navegação principal -->
         <nav class="navbar">
             <a href class="ativo">Baja</a>
             <a href="#nh">História</a>
             <a href="#nE">Equipe</a>
             <a href="#rs">Resultados</a>
-
         </nav>
-
     </header>
+
+    <!-- Navegação secundária para dispositivos móveis -->
     <nav class="navbar-1">
         <a href class="ativo">Baja</a>
         <a href="#nh">História</a>
         <a href="#nE">Equipe</a>
         <a href="#rs">Resultados</a>
     </nav>
+
+    <!-- Seção inicial da página -->
     <nav id="Home">
         <h1>Corsários</h1>
         <h2><br>Baja</h2>
-        <img id="carro-fundo"
-            src="css/WhatsApp_Image_2023-12-17_at_19.58.15-removebg-preview.png"
-            alt>
+        <img id="carro-fundo" src="css/WhatsApp_Image_2023-12-17_at_19.58.15-removebg-preview.png" alt>
     </nav>
+
+    <!-- Conteúdo principal da página -->
     <div class="content">
+        <!-- Seção de História -->
         <div class="conteudo-text">
             <h1 id="nh">Nossa História</h1>
-            <p>A Corsários é uma equipe composta por estudantes de
-                engenharia mecatrônica,engenharia metalúrgica, técnicos em
-                mecânica, que projeta veículos protótipos off-road,
-                monopostos para serem avaliados em competições organizadas
-                pela SAE-Sociedade dos Engenheiros da Mobilidade.</p>
+            <!-- Parágrafos explicativos sobre a equipe Corsários Baja -->
+            <p>A Corsários é uma equipe composta por estudantes de engenharia mecatrônica, engenharia metalúrgica, técnicos em
+                mecânica, que projeta veículos protótipos off-road, monopostos para serem avaliados em competições organizadas pela
+                SAE-Sociedade dos Engenheiros da Mobilidade.</p>
             <br>
-            <p> O veículo é projetado e construído desenvolvendo e aplicando
-                soluções inovadoras, atráves da pesquisa, de maneira a
-                aplicar e expandir o conhecimento adquiridos pelos alunos em
-                sala de aula, assim como proporciona-los o aprendizado das
-                metodologias necessárias para o desenvolvimento de um
-                projeto. Sempre incentivando o trabalho em equipe.</p>
+            <p> O veículo é projetado e construído desenvolvendo e aplicando soluções inovadoras, através da pesquisa, de maneira a
+                aplicar e expandir o conhecimento adquirido pelos alunos em sala de aula, assim como proporcionar o aprendizado das
+                metodologias necessárias para o desenvolvimento de um projeto. Sempre incentivando o trabalho em equipe.</p>
         </div>
+
+        <!-- Seção de Equipe -->
         <div class="conteudo-text2">
             <div class="item">
                 <h1 id="nE">Nossa Equipe</h1>
-                <p>Nossa equipe é formada por estudantes do nível técnico e
-                    graduação.</p><br>
+                <!-- Descrição sobre a formação da equipe -->
+                <p>Nossa equipe é formada por estudantes do nível técnico e graduação.</p><br>
             </div>
+            <!-- Imagem representativa da equipe -->
             <div class="item-1">
-                <img src="css/fundo.jpeg" alt="Imagem equipe" width="400px"
-                    height="400px">
+                <img src="css/fundo.jpeg" alt="Imagem equipe" width="400px" height="400px">
             </div>
-
         </div>
     </div>
 
+    <!-- Seção de Resultados -->
     <nav id="car">
         <div class="carros">
             <div class="result">
                 <h1 id="rs">Resultados</h1>
+                <!-- Descrição dos resultados e botões para seleção de ano -->
                 <p>Resultados de projetos da equipe Corsários Baja.</p>
                 <button onclick="pcar()">2021</button>
                 <button onclick="scar()">2019</button>
                 <button onclick="tcar()">2017</button>
                 <button onclick="qcar()">2015</button>
             </div>
+            <!-- Exibição da imagem do carro e informações relacionadas -->
             <div class="car-img">
                 <h1 id="car-ano">2021</h1>
                 <img src="imagem/Anne.png" alt id="img">
@@ -98,15 +117,16 @@
             </div>
         </div>
     </nav>
-    <footer>
 
+    <!-- Rodapé da página -->
+    <footer>
+        <!-- Conteúdo do rodapé com informações de contato e redes sociais -->
         <div id="footer_content">
             <div id="footer_contacts">
-                <img
-                    src="imagem/WhatsApp_Image_2023-12-17_at_19.56.06-removebg-preview.png"
-                    alt width="150px">
-
+                <img src="imagem/WhatsApp_Image_2023-12-17_at_19.56.06-removebg-preview.png" alt width="150px">
             </div>
+            
+            <!-- Lista de contatos -->
             <ul class="footer-list">
                 <li>
                     <h3>Contato</h3>
@@ -118,50 +138,11 @@
                     <p class="footer-link">Telefone: (32) 4009-3023</p>
                 </li>
             </ul>
+
+            <!-- Lista de informações de localização -->
             <ul class="footer-list">
                 <li>
                     <h3>Localização</h3>
                 </li>
-
                 <li>
-                    <p class="footer-link">Rua Bernardo Mascarenhas, 1283 Bairro
-                        Fábrica</p>
-                </li>
-                <li>
-                    <p class="footer-link">CEP 36080-001</p>
-                </li>
-                <li>
-                    <p class="footer-link">Juiz de Fora - MG</p>
-                </li>
-            </ul>
-            <div id="footer_contacts">
-                <h3>Redes Sociais</h3>
-
-                <div id="footer_social_media">
-                    <a href="https://www.instagram.com/corsariosbaja/"
-                        target="_blank" class="footer-link" id="instagram">
-                        <i class="fa-brands fa-instagram"></i>
-                    </a>
-
-                    <a  class="footer-link" id="facebook">
-                        <i class="fa-brands fa-facebook-f"></i>
-                    </a>
-
-                    <p class="footer-link" id="whatsapp">
-                        <i class="fa-brands fa-whatsapp"></i>
-                    </p>
-                    <a href="https://www.youtube.com/@corsariosbaja744"
-                        target="_blank" class="footer-link" id="youtube">
-                        <i class="fa-brands fa-youtube"></i>
-                    </a>
-                </div>
-               
-                
-            </div>
-            
-        </footer>
-        <div class="copy">
-            <h3>©Eduardo.dev</h3>
-        </div>
-    </body>
-</html>
+                    <p class="
